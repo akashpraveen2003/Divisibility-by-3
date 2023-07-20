@@ -35,12 +35,19 @@ public class Divisibility_by_3 {
 		int n=scanner.nextInt();
 		int sum=0;
 		int array[]=new int[n];
-		for(int i=0;i<n;i++)
+		int power=1;
+		int i;
+		for(i=0;i<n;i++)
 		{
-			array[i]=scanner.nextInt();
-			sum+=array[i];
+			array[i]=scanner.nextInt();		
+		}
+		for(i=n-1;i>=0;i--)
+		{
+			sum+=array[i]*power;
+			power*=10;
 		}
 		System.out.println(divisible_by_3(sum));
+		
 		
 	}
 
